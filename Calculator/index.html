@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="calculator">
+        <div class="top-bar">
+            <h2>Yash Calculator</h2>
+            <button id="themeToggle">🌙</button>
+        </div>
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button onclick="playClick(); clearDisplay()">C</button>
+            <button onclick="playClick(); deleteChar()">DEL</button>
+            <button class="operator" onclick="playClick(); addValue('/')">÷</button>
+            <button class="operator" onclick="playClick(); addValue('*')">×</button>
+            <button onclick="playClick(); addValue('7')">7</button>
+            <button onclick="playClick(); addValue('8')">8</button>
+            <button onclick="playClick(); addValue('9')">9</button>
+            <button class="operator" onclick="playClick(); addValue('-')">−</button>
+            <button onclick="playClick(); addValue('4')">4</button>
+            <button onclick="playClick(); addValue('5')">5</button>
+            <button onclick="playClick(); addValue('6')">6</button>
+            <button class="operator" onclick="playClick(); addValue('+')">+</button>
+            <button onclick="playClick(); addValue('1')">1</button>
+            <button onclick="playClick(); addValue('2')">2</button>
+            <button onclick="playClick(); addValue('3')">3</button>
+            <button class="equal" onclick="playClick(); showResult()">=</button>
+            <button onclick="playClick(); addValue('0')" style="grid-column: span 2;">0</button>
+            <button onclick="playClick(); addValue('.')">.</button>
+        </div>
+    </div>
+    <audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1e78a29c6e.mp3?filename=button-124476.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
